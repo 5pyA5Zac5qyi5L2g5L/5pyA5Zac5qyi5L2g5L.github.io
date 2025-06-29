@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>解密器</title>
+</head>
+<body style="text-align:center">
+    <h3>解密工具</h3>
+    <p>密文：</p>
+    <textarea id="f" style="width:300px;height:100px"></textarea>
+    <p>秘钥（16字符）：</p>
+    <textarea id="s" style="width:300px;height:100px"></textarea>
+    <p>结果：</p><b id="ans"></b>
+    <p id="tip" style="color:red"></p>
+    <button onclick="javascript:f()">解密</button>
+    <script>
+        function f(){
+            var f = document.getElementById("f").value;
+            var s = document.getElementById("s").value;
+            if(f == "qG4oCm6auY6ICD5ZCO44CB5pyJ5rKh5pyJ5py65Lya" && s == "5Zyo5LiA6LW35ZGi"){
+                document.getElementById("ans").innerText = "想贴贴~o(*////▽////*)q";//才不会告诉你这其实是base64呢小笨蛋
+                document.getElementById("tip").innerText = "Tip：把解密结果通过QQ发给TA吧~";
+            }else if(f == "base64" || s == "base64"){
+                document.getElementById("ans").innerText = "不、不要把这段完整的密文拿去base64解密啊笨蛋！！";
+            }else{
+                document.getElementById("ans").innerText = "解密失败";
+            }
+        }
+    </script>
+</body>
+</html>
